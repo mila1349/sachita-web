@@ -57,6 +57,7 @@ function Category() {
 
         return ()=>{
             window.removeEventListener('scroll',scroll)
+            document.body.style.height=`unset`;
         }
     },[])
 
