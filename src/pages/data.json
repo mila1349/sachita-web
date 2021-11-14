@@ -1,0 +1,64 @@
+[
+    {
+    "name":"Acrylic Paintings",
+    "folder":"images/Acrylic Painting/",
+    "format":"jpeg",
+    "show":"5",
+    "img":[2,3,4,5,6,7,8,9,10,11]
+},
+{
+    "name":"Digital Design",
+    "folder":"images/Digital Design/",
+    "format":"JFIF",
+    "show":"4",
+    "img":[2,3,4,5,6,7,8,9,10]
+},
+{
+    "name":"Pencil Drawings",
+    "folder":"images/Pencil Drawings/",
+    "format":"JPG",
+    "show":"5",
+    "img":[2,3,4,5]
+
+},
+{
+    "name":"Water Color Paintings",
+    "folder":"images/Water Color Paintings/",
+    "format":"jpg",
+    "show":"7",
+    "img":[2,3,4,5,6,7,8,9,10,11,12,13,14]
+
+},
+{
+    "name":"Perspective 3D Design",
+    "folder":"images/Perspective 3D Design/",
+    "format":"jpg",
+    "show":"1",
+    "img":[1,2,3]
+
+},
+{
+    "name":"Still Life Drawings",
+    "folder":"images/Still Life Drawings/",
+    "format":"jpg",
+    "show":"1",
+    "img":[1,2,3]
+
+},
+{
+    "name":"Human Figure Drawing",
+    "folder":"images/Human Figure Drawing/",
+    "format":"jpg",
+    "show":"6",
+    "img":[1,2,3,4,5,6]
+
+},
+{
+    "name":"Computer-Aided Design",
+    "folder":"images/Computer-Aided Design/",
+    "format":"PNG",
+    "show":"7",
+    "img":[1,2,3,4,5,6,7,8,9,10]
+
+}
+]

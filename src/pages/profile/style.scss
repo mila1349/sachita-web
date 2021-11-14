@@ -1,0 +1,144 @@
+@import 'src/index.scss';
+
+.profile{   
+    font-family: $fontFamily;
+    h1{
+        font-size:3rem;
+    }
+    p{
+        // font-size: 1.5rem;
+        line-height:20px;
+    }
+    .tentang{
+        // background-image: url("sky.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 80%;
+        }
+        .about{
+            height:80%;
+            width: 30%;
+            padding: 2rem;
+            background: $bgColor;
+            color:$fontColor;
+            .gambar{
+                width:100%;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 150px;
+                    margin: 2rem 0;
+                    display: none;
+                }
+            }
+            
+            p{
+                margin-top: 2rem;
+            }
+            @media only screen and (max-width: 1050px){
+                width:unset;
+            }
+        }
+    }
+
+    .activity-container{
+        display: flex;
+        flex-wrap: wrap;
+        width:100%;
+        min-height: 100vh;
+        justify-content:center;
+        align-items:flex-start;
+        .activity{
+            background: #fff;
+            color: #000;
+            width: 300px;
+            padding: 2rem;
+            h2{
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            margin: 2rem;
+            h3{
+                margin:1rem 0;
+            }
+        }
+        .course{
+            width: 300px;
+            color:#fff;
+            margin: 2rem 3rem;
+            h3{
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .activities{
+        width: 100%;
+        min-height:100vh;
+        padding-top: 3rem;
+        background: $bgColor;
+        h1{
+            text-align: center;
+            color: #fff;
+        }  
+    }
+
+    .courses{
+        color:#fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top:2rem;
+        h1{
+            text-align:center;
+        }
+        .activity-container{
+            
+            width:85%;
+            justify-content: left;
+        }
+    }
+    @media only screen and (max-width: 700px){
+        .tentang{
+            height: unset;
+            flex-direction: column;
+            padding: 5rem 3rem;
+            text-align: center;
+            .about{
+            .gambar{
+                img{
+                    display: block;
+                }
+            }}
+            .main-img{
+                display: none;
+            }
+        }
+        .courses{
+            // background: red;
+            padding-top:5rem ;
+            .activity-container{
+                justify-content: center;
+                .course{
+                    margin: 2rem 0;
+                    h3{
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 400px){
+        .tentang{
+            padding: 1rem;
+        }
+    }
+}

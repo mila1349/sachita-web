@@ -1,0 +1,61 @@
+@import 'src/index.scss';
+body{
+    background: $bgColor;
+}
+.category{
+    height: 60vh;
+    position:fixed;
+    min-width: 4000px;
+    // width:max-content;
+    top:25vh;
+    left:0;
+    background: $bgColor;
+    color: $fontColor;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    // z-index:90;
+    @media only screen and (max-width: 600px){
+        padding:0 3rem;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        margin-right: 5rem;
+        span{
+            display:flex;
+            h2{
+                position: relative;
+                z-index: 100;
+                font-family: $fontFamily;
+                font-size: calc(40px + (70 - 40) * ((100vw - 300px) / (1600 - 300)));
+
+                font-weight: lighter;
+                margin-right:1rem;
+            }
+        }
+    }
+   
+    .cat{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5rem;
+        .img{
+            height: 90%;
+            position: relative;
+            img{
+                height: 100%;
+            }
+            h3{
+                position: absolute;
+                bottom: -5%;
+                right: 5%;
+                font-size: 3rem;
+                font-weight: lighter;
+            }
+        }
+    }
+}

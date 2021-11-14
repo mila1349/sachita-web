@@ -1,0 +1,28 @@
+@font-face{
+    font-family: 'Roxborough CF';
+    src:local('Roxborough CF'), url('./fonts/Roxborough\ CF.ttf') format('truetype')
+}
+@font-face{
+    font-family: 'Orpheus';
+    src:local('Orpheus'), url('./fonts/Orpheus.ttf') format('truetype')
+}
+@font-face{
+    font-family: 'Ogg-Roman';
+    src:local('Ogg-Roman'), url('./fonts/Ogg-Roman.otf') format('truetype')
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 12px;
+    
+}
+h1{
+    font-family: Ogg-Roman, serif;
+}
+
+$bgColor:#000;
+$fontColor:#fff;
+$fontFamily:Roxborough CF, serif;
