@@ -1,6 +1,19 @@
 @import 'src/index.scss';
 body{
     background: $bgColor;
+    
+}
+.wrapper{
+    height:100vh;
+    background: $bgColor;
+    position:relative;
+    .scroll-down{
+        position: absolute;
+        top: 90%;
+        left:50%;
+        transform: translateX(-50%);
+        color:#fff;
+    }
 }
 .category{
     height: 60vh;

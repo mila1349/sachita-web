@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react'
 import InView from 'react-intersection-observer'
 import {motion} from 'framer-motion'
 
-function Two({img, }) {
-   
-
-    return (
-        <InView threshold={0.9} triggerOnce={true}>
+function Two({img, trigger}) {
+    
+    function Comp(){
+        return(
+            <InView threshold={0.5} triggerOnce={true}>
         {({ ref, inView }) => (
         <div className="third">
             <motion.img src={img} alt="" 
@@ -17,6 +17,13 @@ function Two({img, }) {
         </div>
         )}
         </InView>
+        )
+    }
+
+    return (
+        <div className="nah">
+            {trigger&&<Comp/>}
+        </div>
             
     )
 }

@@ -11,12 +11,12 @@ return(
                 </div>
                 <h1>Sachita Kashyap</h1>
                 <h2>Problem solver, visual storyteller and aspiring UX designer.</h2>
-                <p>Hi! My name is Sachita Kashyap and I am a junior at Monta Vista High School. At school, I currently play on the Field Hockey Team and I am an officer for the MV App and Web Development Club. In my free time, I love to dance Classical Indian Dance which I have been learning for the last nine years, take polaroid pictures and photography, and paint with acrylic on canvas. One of my favorite memories from dance includes competing at the Grand Prix Italia in Barcelona in the summer of 2018. My career interests explore the intersections between computer science, business, and using art through marketing and design. I'm interested in pursuing business-oriented and web design degrees. Thanks for visiting my website! If you're interested in messaging me directly, head over to the Contact Me page.</p>
+                <p>Hi! My name is Sachita Kashyap and I am a junior at Monta Vista High School. At school, I currently play on the Field Hockey Team and I am an officer for the MV App and Web Development Club. In my free time, I love to dance Classical Indian Dance which I have been learning for the last nine years, take polaroid pictures and photography, and paint with acrylic on canvas. One of my favorite memories from dance includes competing at the Grand Prix Italia in Barcelona in the summer of 2019. My career interests explore the intersections between computer science, business, and using art through marketing and design. I'm interested in pursuing business-oriented and web design degrees. Thanks for visiting my website! If you're interested in messaging me directly, head over to the Contact Me page.</p>
             </div>
             <img src="sachi.jpg" alt="" className="main-img"/>
         </section>
 
-        <section className="activities">
+        {/* <section className="activities">
             <h1>My <b>Activities</b></h1>
             <div className="activity-container">
             <div className="activity">
@@ -47,9 +47,9 @@ return(
                 <p>Work with young kids and ticket in adults. I am also a robotics helper, where I help rewire the robots in the museum.</p>
             </div>
             </div>
-        </section>
+        </section> */}
 
-        <section className="courses">
+        {/* <section className="courses">
             <h1>Highlited <b>Courses</b></h1>
             <div className="activity-container">
                 <div className="course">
@@ -77,7 +77,7 @@ return(
                     <p>This class taught me not only how to code in JAVA, but about software and hardware inputs and ouputs, GUI, user security, and privacy. Sophomore year I coded a game from scratch using GUI and JAVA about natural disasters to educate students about the different types and conditions of natural disasters.</p>
                 </div>
             </div>
-        </section>
+        </section> */}
     </div>
 )
 }

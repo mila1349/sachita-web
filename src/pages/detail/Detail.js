@@ -12,6 +12,7 @@ import Nav from '../../pages/Nav'
 export default function Deatil(){
     const location = useLocation()
     const index=location.state.index
+    const [trigger, setTrigger]=useState(false)
 
     return(
         <div className="detail">
@@ -42,6 +43,7 @@ export default function Deatil(){
                     <motion.img src={data[index].folder+"1"+"."+data[index].format} alt=""
                         initial={{opacity:0, scale:0.8}}
                         animate={{opacity:1, scale:[0.8, 1.1, 1]}}
+                        onAnimationComplete={()=>setTrigger(true)}
                     />
                 </div>
 
@@ -51,14 +53,14 @@ export default function Deatil(){
                             return(
                                 <Two
                                     img={data[index].folder+item+"."+data[index].format}
-                                   
+                                   trigger={trigger}
                                 />
                             )
                         }else{
                             return(
                                 <One
                                     img={data[index].folder+item+"."+data[index].format}
-                                    
+                                   trigger={trigger}
                                 />
                             )
                         }

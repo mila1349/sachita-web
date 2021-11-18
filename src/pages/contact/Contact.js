@@ -6,11 +6,11 @@ import * as emailjs from "emailjs-com";
 import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker"
 import './style.scss'
 
-mapboxgl.workerClass = MapboxWorker;
-mapboxgl.accessToken = "pk.eyJ1IjoibWlsYXJvemkiLCJhIjoiY2txdDM1M2JvMDQzejJ2cDh4MDdwMGpkeSJ9.LlwSpBpanxvRXROAbS1ZrA";
+// mapboxgl.workerClass = MapboxWorker;
+// mapboxgl.accessToken = "pk.eyJ1IjoibWlsYXJvemkiLCJhIjoiY2txdDM1M2JvMDQzejJ2cDh4MDdwMGpkeSJ9.LlwSpBpanxvRXROAbS1ZrA";
 
 function Contact() {
-    const mapContainerRef = useRef(null);
+    // const mapContainerRef = useRef(null);
 
     const [name, setName]=useState("")
     const [email, setEmail]=useState("")
@@ -20,20 +20,20 @@ function Contact() {
 
 
     // initialize map when component mounts
-    useEffect(() => {
-        const map = new mapboxgl.Map({
-            container: mapContainerRef.current,
-            // See style options here: https://docs.mapbox.com/api/maps/#styles
-            style: 'mapbox://styles/milarozi/ckssvcwbj3lhs17qivg0mgcdo',
-            center: [107.621035, -6.883534],
-            zoom: 15,
-        });
+    // useEffect(() => {
+    //     const map = new mapboxgl.Map({
+    //         container: mapContainerRef.current,
+    //         // See style options here: https://docs.mapbox.com/api/maps/#styles
+    //         style: 'mapbox://styles/milarozi/ckssvcwbj3lhs17qivg0mgcdo',
+    //         center: [107.621035, -6.883534],
+    //         zoom: 15,
+    //     });
 
-        // add navigation control (the +/- zoom buttons)
-        map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
-        // clean up on unmount
-        return () => map.remove();
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    //     // add navigation control (the +/- zoom buttons)
+    //     map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+    //     // clean up on unmount
+    //     return () => map.remove();
+    // }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     function handleSubmit(e){
         e.preventDefault();
@@ -87,9 +87,9 @@ function Contact() {
                     </button>
                 </form>
 
-                <div className="contact-box" >
+                {/* <div className="contact-box" >
                     <div className="map" ref={mapContainerRef}></div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

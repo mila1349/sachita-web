@@ -5,35 +5,9 @@ import data from '../data.json'
 import SplitText from '../../SplitText';
 
 
-// const dataCategory=[
-//     {
-//         name:"Acrylic Paintings",
-//         folder:"images/Acrylic Painting/",
-//         format:"jpeg",
-//         show:"5"
-//     },
-//     {
-//         name:"Digital Design",
-//         folder:"images/Digital Design/",
-//         format:"JFIF",
-//         show:"4"
-//     },
-//     {
-//         name:"Pencil Drawings",
-//         folder:"images/Pencil Drawings/",
-//         format:"JPG",
-//         show:"5"
-//     },
-//     {
-//         name:"Water Color Paintings",
-//         folder:"images/Water Color Paintings/",
-//         format:"jpg",
-//         show:"7"
-//     },
-    
-// ]
 function Category() {
     const container=useRef(null)
+    const p=useRef(null)
     const [first, setFirst] = useState(false);
     const [second, setSecond] = useState(false);
     const [third, setThird] = useState(false);
@@ -41,6 +15,11 @@ function Category() {
 
     function scroll(){
         container.current.style.left=`-${window.scrollY}px`
+        if(window.scrollY>=50){
+            p.current.style.opacity=0
+        }else{
+            p.current.style.opacity=1
+        }
     }
 
     useEffect(()=>{
@@ -62,84 +41,8 @@ function Category() {
     },[])
 
     return (
+        <div className="wrapper">
         <div className="category" ref={container} >
-            <div className="text">
-                <span>
-                    <h2>
-                    <SplitText
-                        initial={{ y: "100%" }}
-                        animate="visible"
-                        variants={{
-                        visible: (i) => ({
-                            y: 0,
-                            transition: {
-                            delay: i * 0.1,
-                            duration: 0.2
-                            }
-                        })
-                        }}
-                        onAnimationComplete={()=>setFirst(true)}
-                    >
-                        Creative
-                    </SplitText>
-                    </h2>
-                    <h2>
-                    <SplitText
-                        initial={{ y: "100%" }}
-                        animate="visible"
-                        variants={{
-                        visible: (i) => ({
-                            y: 0,
-                            transition: {
-                            delay: i * 0.1,
-                            duration: 0.2
-                            }
-                        })
-                        }}
-                    >
-                        Mind
-                    </SplitText>   
-                    </h2>
-                </span>
-                <span>
-                    <h2>
-                    <SplitText
-                        initial={{ y: "100%" }}
-                        animate={first&&"visible"}
-                        variants={{
-                        visible: (i) => ({
-                            y: 0,
-                            transition: {
-                            delay: i * 0.1,
-                            duration: 1
-                            }
-                        })
-                        }}
-                    >
-                        Great
-                    </SplitText>  
-                    </h2>
-                    <h2>
-                    <SplitText
-                        initial={{ y: "100%" }}
-                        animate={first&&"visible"}
-                        variants={{
-                        visible: (i) => ({
-                            y: 0,
-                            transition: {
-                            delay: i * 0.1,
-                            duration: 1
-                            }
-                        })
-                        }}
-                        onAnimationComplete={()=>setSecond(true)}
-                    >
-                        Skill
-                    </SplitText>  
-                    </h2>
-                </span>
-            </div>
-            
             {
                 data.map((item,index)=>(
                     <Cat
@@ -153,6 +56,8 @@ function Category() {
                 ))
             }
             
+        </div>
+        <p className="scroll-down" ref={p}>Scroll down to see</p>
         </div>
     )
 }

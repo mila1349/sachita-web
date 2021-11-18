@@ -20,9 +20,9 @@ function Cat({name, folder, format, show, index, start}) {
                 >
                 <motion.img src={folder+show+"."+format} alt="" 
                     initial={{opacity:0, scale:0.8}}
-                    animate={start&&{opacity:1, scale:[0.8, 1.1, 1]}}
+                    animate={{opacity:1, scale:[0.8, 1.1, 1]}}
                     transition={{
-                        delay:index/10
+                        delay:index/5
                     }}
                     onAnimationComplete={()=>setText(true)}
                 />

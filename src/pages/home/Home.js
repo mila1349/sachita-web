@@ -82,7 +82,7 @@ function Home() {
                 initial="hidden"
                 animate="visible"
             />
-            <motion.img src="images/Digital Design/4.jfif" alt="" className="img4"
+            <motion.img src="images/Digital Design/5.jfif" alt="" className="img4"
                 variants={img4Variant}
                 initial="hidden"
                 animate="visible"
