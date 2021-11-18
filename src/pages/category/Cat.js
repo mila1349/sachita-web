@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion'
+import InView from 'react-intersection-observer'
+
 
 
 function Cat({name, folder, format, show, index, start}) {
@@ -18,14 +20,17 @@ function Cat({name, folder, format, show, index, start}) {
                     }
                     }}
                 >
+                <InView threshold={0.5} triggerOnce={true}>
+        {({ ref, inView }) => (
                 <motion.img src={folder+show+"."+format} alt="" 
+                    ref={ref}
                     initial={{opacity:0, scale:0.8}}
-                    animate={{opacity:1, scale:[0.8, 1.1, 1]}}
-                    transition={{
-                        delay:index/5
-                    }}
+                    animate={inView&&{opacity:1, scale:[0.8, 1.1, 1]}} 
                     onAnimationComplete={()=>setText(true)}
                 />
+        )}
+        </InView>
+
                 </Link>
                 <motion.h3
                     initial={{opacity:0}}

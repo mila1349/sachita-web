@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React  from 'react'
 import {motion} from 'framer-motion'
 import InView from 'react-intersection-observer'
+import ImageZoom from "react-image-zooom";
 
 
 function One({img, trigger}) {
@@ -10,12 +11,23 @@ function One({img, trigger}) {
             <InView threshold={0.5} triggerOnce={true}>
         {({ ref, inView }) => (
         <div className="second">
-            <motion.img src={img} alt="" 
+            <motion.div className="img-zoom"
+                ref={ref}
+                initial={{opacity:0, scale:0.8}}
+                animate={inView&&{opacity:1, scale:[0.8, 1.1, 1]}}
+            >
+               <ImageZoom
+                    src={img} 
+                    alt=""
+                    className="zoom"
+                /> 
+            </motion.div>
+            {/* <motion.img src={img} alt="" 
                 ref={ref}
                 initial={{opacity:0, scale:0.8}}
                 animate={inView&&{opacity:1, scale:[0.8, 1.1, 1]}}
             
-            />
+            /> */}
         </div>
         )}
         </InView>

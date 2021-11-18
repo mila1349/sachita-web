@@ -17,17 +17,15 @@ body{
     }
 }
 .category{
-    height: 60vh;
-    position:fixed;
-    min-width: 4000px;
+    width:100%;
     // width:max-content;
     top:25vh;
     left:0;
     background: $bgColor;
     color: $fontColor;
-    overflow-y: hidden;
     display: flex;
     align-items: center;
+    flex-direction: column;
     padding: 0 5rem;
     // z-index:90;
     @media only screen and (max-width: 600px){
@@ -52,16 +50,18 @@ body{
     }
    
     .cat{
-        height: 100%;
+        width:100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right: 5rem;
+        margin:5rem 0;
+        
         .img{
-            height: 90%;
+            width:40%;
             position: relative;
+            min-width:250px;
             img{
-                height: 100%;
+                width: 100%;
             }
             h3{
                 position: absolute;

@@ -7,7 +7,7 @@ import Two from './Two'
 import SplitText from '../../SplitText';
 import {motion} from 'framer-motion'
 import Nav from '../../pages/Nav' 
-
+import ImageZoom from "react-image-zooom";
 
 export default function Deatil(){
     const location = useLocation()
@@ -40,11 +40,24 @@ export default function Deatil(){
             >- Sachita Kashyap -</motion.p>
             <div className="img-wrapper">
                 <div className="center">
-                    <motion.img src={data[index].folder+"1"+"."+data[index].format} alt=""
-                        initial={{opacity:0, scale:0.8}}
-                        animate={{opacity:1, scale:[0.8, 1.1, 1]}}
-                        onAnimationComplete={()=>setTrigger(true)}
-                    />
+                <motion.div className="img-zoom"
+                    initial={{opacity:0, scale:0.8}}
+                    animate={{opacity:1, scale:[0.8, 1.1, 1]}}
+                    onAnimationComplete={()=>setTrigger(true)}
+                >
+                   <ImageZoom
+                        src={data[index].folder+"1"+"."+data[index].format} 
+                        alt=""
+                        className="zoom"
+                    /> 
+                </motion.div>
+                
+
+                    {/* <motion.img src={data[index].folder+"1"+"."+data[index].format} alt=""
+                       initial={{opacity:0, scale:0.8}}
+                         animate={{opacity:1, scale:[0.8, 1.1, 1]}}
+                         onAnimationComplete={()=>setTrigger(true)}
+                     /> */}
                 </div>
 
                 {

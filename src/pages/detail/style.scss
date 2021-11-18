@@ -24,11 +24,14 @@
         display: flex;
         flex-direction: column;
         
-        img{
-            object-fit: contain;
+        .img-zoom{
             width: 40%;
-            max-height: 500px;
             padding-bottom: 5%;
+            .zoom{
+                width: 100%;
+                object-fit: contain;
+                
+            }
         }
        .center{
            width: 100%;
